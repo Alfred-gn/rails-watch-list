@@ -1,0 +1,10 @@
+<h1>catégories</h1>
+<ul>
+  <% @list.each do |list| %>
+    <li> <%= link_to(list.name, list_path(list)) %> <%= link_to("créer", new_list_path) %> <%= link_to "Delete",
+  list_path(@list),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%></li>
+  <% end %>
+</ul>
+<p>Find me in app/views/lists/index.html.erb</p>
