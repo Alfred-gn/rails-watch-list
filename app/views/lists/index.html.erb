@@ -2,8 +2,8 @@
 <ul>
   <% @list.each do |list| %>
     <li> <%= link_to(list.name, list_path(list)) %> <%= link_to("créer", new_list_path) %> <%= link_to "Delete",
-  list_path(@list),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  list_path(list),
+data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %></li>
   <% end %>
 </ul>
